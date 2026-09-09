@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>순서있고, 없는 목록 만들기</title>
+</head>
+<body>
+    <!-- <ol> <li></li> </ol> => 오로지 자식은 <li>태그이다. -->
+    <!-- ol태그는 순서가 존재하는 목록을 작성할 때 사용하는 태그이다. -->
+    <!-- <ol></ol>태그 그 어떤 태그도 자식으로 사용할 수 없다. -->
+    <ol type="A" start="3">
+        <li>HTML, <strong style="color:blue;">CSS</strong>, JavaScript</li>
+        <li><div>HTML</div></li>
+    </ol>    
+
+    <!-- <ul><li></li></ul> => 오로지 자식은 <li>태그이다. -->
+    <!-- ul태그는 순서가 존재하지 않는 목록을 작성할 때 사용하는 태그이다. -->
+    <!-- ul태그는 실무에 많이 사용한다. -->
+    <ul>
+        <li>Java, Python, C+, MySQL</li>
+        <li>코딩은 재미있어!!</li>
+    </ul> 
+    <ul>
+        <li>메인 리스트1
+            <ul>
+                <li>서브 목록 리스트1</li>
+                <li>서브 목록 리스트2</li>
+            </ul>
+        </li>
+    </ul> 
+    <hr/>
+
+    <ol>
+        <li>채소
+            <ul>
+                <li>친환경</li>
+                <li>고구마/감자/당근</li>
+            </ul>
+        </li>
+        <li>과일/견과/쌀</li>
+        <li>수산/해산/건어물</li>
+        <li>정육/계란</li>
+    </ol>
+
+    <hr/>
+    <!-- <a href="이동할 주소지정" >텍스트</a> 
+            => 이동할 주소로 이동하는 가장 기본이 되는 태그 
+    -->
+    <!-- <a>태그의 title속성은 사용자의 접근성을 위해 작성하는 것이 좋다.  -->
+    <!-- <img>태그 src 속성은 반드시 상대경로방식으로 지정한다. -->
+    <ul>
+        <li>
+            <a href="https://www.naver.com" target="_blank" title="네이버가기">
+                <img src="images/search.svg" alt="네이버아이콘" width="30px;" height="30px;"/>
+            </a> 
+        </li>
+        <li>
+            <a href="https://daum.net"  title="다음가기">
+                <img src="images/bird.svg" alt="다음아이콘" width="30px;" height="30px;" />
+            </a> 
+        </li>
+        <li>
+            <a href="https://www.google.com" target="_top" title="구글가기">
+                <img src="images/i-gnb.svg" width="30px;" height="30px;" alt="구글아이콘" />
+            </a> 
+        </li>
+    </ul>        
+
+
+
+
+
+
+
+</body>
+</html>
