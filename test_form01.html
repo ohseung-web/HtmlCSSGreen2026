@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 연습</title>
+</head>
+<body>
+    <!-- <form>태그란 => 사용자가 입력한 자료를 서버로 전송
+         하고자 할때 사용하는 가장 대표적인 태그이다.
+         <form>태그 안의 action속성은 서버의 URL을 입력한다.
+         <form>태그 안의 method속성은 
+               자료를 서버로 어떤 방식으로 넘길건지의 방법을 선택하는 속성이다.   
+               1) POST : 사용자가 입력한 내용이 드러나지 않는다.
+               2) GET :  사용자가 입력한 내용이 모두 보인다.
+    -->
+   <form action="#" method="GET">
+        <!-- <form>태그 안에 자료를 입력하는 <input>태그를 작성한다.
+             단, input 태그는 단독 태그이므로 <input      />
+             - input 태그의 type 속성은 입력하는 자료가 문자인지, 숫자인지, 암호인지를
+               구분해주는 속성이다.      
+             - <input>태그는 인라인태그의 종류로 높이를 가질 수 없다.  
+             - 시작~끝 : <a> ~ </a>
+             - 단독태그 : 닫는태그가 존재하지 않는다.
+                         <input />
+                         단, 단독태그는 /가 없어도 무방하다.
+        -->
+       <label>사용자ID : <input type="text" /></label><br/>
+       <label for="pw">비밀번호 :</label>
+       <input type="password" id="pw" /><br/>
+       <label for="mail">이메일</label>
+       <!-- input 태그의 readonly속성은 입력불가, 읽기만 가능 -->
+       <input type="email"  readonly /> <br/>
+       <input type="email"  /> <br/>
+       <label>URL 입력:</label>
+       <input type="url" placeholder="https://" /><br/>
+       <label>전화번호 입력:</label>
+       <input type="tel" placeholder="010-1234-4567" /><br/>
+       <label>검색 :</label>
+       <input type="search" placeholder="검색어 입력"/><br/>
+
+       <!-- <input>태그의 type 속성중 submit은 입력한 자료를 서버로 전송하는 역활을 한다. -->
+       <input type="submit" value="완료" /> 
+   </form> 
+ 
+    <!-- <filedset>태그를 이용한 form 작성하기 -->
+    <form>
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <label>아이디</label><input type="text"><br/>
+            <label>비밀번호</label><input type="password"><br/>
+        </fieldset>
+        <fieldset>
+            <legend>회원 정보</legend>
+            <label>취미/특기</label><input type="text"><br/>
+        </fieldset>
+    </form>    
+
+    <!-- <input>태그의 checkbox type 속성은
+         동시에 여러개를 선택할 수 있는 체크박스이다.
+         <input type="checkbox" checked /> 여기서 checked는 
+         기본적으로 체크박스하나를 선택했다는 의미이다. 
+         checkbox나 radio type은 반드시 name을 지정하여 하나의 그룹임을 알려야 한다.
+    -->
+    <form>
+        <input type="checkbox" value="1" checked name="hoby" />게임하기
+        <input type="checkbox" value="2" name="hoby" />영화관람
+        <input type="checkbox" value="3" name="hoby" />음악감상
+    </form>
+    <!-- <input>태그의 radio type는 한번에 하나만 선택할 수 있다. -->
+    <form>
+        <input type="radio" name="school"  checked />초등학교
+        <input type="radio" name="school" />중학교
+        <input type="radio" name="school" />고등학교<br/>
+        <label for="content">남기는 말</label><br/>
+        <textarea cols="40" rows="5"></textarea>
+    </form>
+
+    <!-- <select>태그는  드롭다운 메뉴로 메뉴를 선택할때 사용한다.
+         반드시 <option>태그와 같이 사용한다.    
+    -->
+    <form>
+        <select>
+            <option value="" disabled>Family Site</option>
+            <option value="건축사무소" selected>건축사무소</option>
+            <option value="시공사무소">시공사무소</option>
+            <option value="설계사무소">설계사무소</option>
+        </select>
+    </form>    
+    
+    <!-- <button>태그의 type의 종류 : submit(전송), reset(취소),
+         button(그냥 버튼)    
+    -->
+    <label>전송버튼</label>
+    <button type="submit">전송1</button>     
+    <button type="reset">최소</button>     
+    <button type="button">버튼</button>     
+
+</body>
+</html>
