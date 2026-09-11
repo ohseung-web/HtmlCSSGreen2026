@@ -1,0 +1,141 @@
+@charset 'utf-8';
+/* 모든 기본 스타일 초기화 */
+        *{
+            /* 모든 요소의 기본 여백을 제거한다. */
+            padding:0;
+            margin:0;
+        }
+        body{
+           font-family: sans-serif,Arial;
+           /* 배경색 지정하는 CSS */
+           background-color: #f2f2f2;
+            /* padding은 안쪽여백을 지정하는 CSS  */
+            /* margin은 바깥쪽 여백을 지정하는 CSS */
+            /* padding:5px, margin:5px => 상, 하, 좌, 우 한꺼번에 
+                                          같은 여백이 지정된다.
+            */
+            padding: 20px;
+        }
+        h3{
+            /* 텍스트 정렬 CSS */
+            text-align: center;
+            /* 글꼴의 색을 지정하는 CSS */
+            /* 웹 표준상 모든 색은 코드로 CSS정의 한다. */
+            color: #333;
+            /* 제목 아래 20px 여백주려면 폼과의 간격을 지정하려고 함 */
+            margin-bottom: 20px;
+        }
+        form{
+            background-color: #fff;
+            /* 폼 내부 요소와 사이의 여백 20px지정 */
+            padding: 20px;
+            /* 폼의 너비를 550px로 고정 */
+            width: 550px;
+            /* 폼 화면의 중앙에 배치되도록 지정하는 CSS */
+            /* margin: 0 auto => 상하 여백은 0, 좌우 여백은 auto */
+            margin: 0 auto;
+            /* 폼의 모서리를 둥글게 처리하는 CSS */
+            border-radius: 10px;
+            /* 폼 주변에 옅은 그림자 효과를 지정 */
+            /* box-shadow: 0   4px 10px     rgba(0,0,0,0.2) */
+            /*           : x축 y축 번짐정도  검은색의 투명도 20%지정 */
+            box-shadow: 0 4px 5px rgba(0,0,0, 0.3);
+        }
+        fieldset{
+            /* border : 1px(선 두께) solid(실선) black(선색) */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            /* padding: 10px 20px => 위아래(10px) 왼오(20px) */
+            padding: 15px 20px;
+            margin: 20px;
+        }
+        legend{
+            /* 글꼴의 굵기를 지정하는 CSS */
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        /* ul 태그의 리스트 스타일을 제거 */
+        ul{
+            list-style: none;
+        }
+        li{
+            margin-bottom: 15px;
+        }
+        /* class라는 속성으로 작성된 이름을 CSS로 작성할때는 
+           반드시 .class 이름을 입력한다.
+        */
+        /* title로 정의된 태그는 <label>태그이다.
+           태그의 종류는 인라인, 블록, 인라인블록으로 나뉜다.
+           그중 인라인 태그에 속한다.
+           단, 인라인 태그는 너비를 가질 수 없다.    
+           인라인 태그를 블록이나 인라인블록으로 변경할 수 있다.
+           display : inline-block, block로 변경하는 CSS
+        */
+        .title{
+            display: inline-block;
+            width: 80px;
+            font-weight: bold;
+        }
+        /* 성별, 취미 부분의 label CSS 부분 */
+        .gender_item label,
+        .hobby_item label{
+            margin-right: 10px;
+        }
+        /* 기본입력창 (텍스트, 이메일, 비밀번호 ), select 박스 공통 CSS */
+        input[type='text'],
+        input[type='email'],
+        input[type='password'],
+        select{
+            width: 300px;
+            padding: 6px 8px;
+            border:1px solid #ccc;
+            border-radius: 5px;
+            /* 350px 패딩여백까지 포함한 크기로 지정하는 CSS */
+            box-sizing: border-box;
+        }
+        /* input태그의 placeholder 속성을 변경하는 CSS */
+        input[type='text']::placeholder,
+        input[type='email']::placeholder,
+        input[type='password']::placeholder{
+            font-size: 10px;
+        }
+
+        /* 체크박스, 라디오 버튼 공통 CSS */
+        input[type='checkbox'],
+        input[type='radio']{
+            margin-right: 5px;
+        }
+        /* 신청, 취소버튼 CSS */
+        .btn{
+            /* 버튼을 가운데 정렬 */
+            text-align: center;
+        }
+        /* 신청과 취소버튼 기본 공통 CSS */
+        .btn button[type='submit'],
+        .btn button[type='reset']{
+            padding: 10px 20px;
+            /* 기본 테두리 제거 CSS */
+            border : none;
+            border-radius: 5px;
+            font-size: 15px;
+            /* 버튼위에 마우스를 올리면 손가락모양으로 변경되는 CSS */
+            cursor: pointer;
+        }
+        .btn button[type='submit']{
+            background-color: #4caf50;
+            color: white;
+        }
+        .btn button[type='reset']{
+            background-color: #f44336;
+            color: white;
+        }
+        /* 신청, 취소버튼위에 마우스 오버하면 버튼의 색을 변경하는 CSS */
+        /* 수강신청 버튼*/
+        .btn button[type='submit']:hover{
+            background-color:#4caf30 ;
+        }
+        /* 취소 버튼 */
+        .btn button[type='reset']:hover{
+             background-color: #f40000;
+        }
+

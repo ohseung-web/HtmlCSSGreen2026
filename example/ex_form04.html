@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 연습문제</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <h4>예약 날짜/시간 입력</h4>
+        <!--※ ul의 자식태그는 li만 존재한다. -->
+        <ul>
+            <li>
+                <!-- label태그 for속성을 스크린 리더기가 읽어
+                     장애인들의 웹 사용성을 돕는다. 
+                -->
+                <label for="month-input">month :</label>  
+                <!-- type=month : 연도와 월(YYYY-MM)을 선택하는 달력 피커 생성 -->
+                <input type="month" id="month-input" name="reservation_month" value="2026-09" />
+            </li>
+            <li>
+                <label for="week-input">week :</label>  
+                <!-- type=week : 연도와 주차(YYYY-wxx)을 선택하는 주 단위 입력 피커 생성 -->
+                <input type="week" id="week-input" name="reservation_week" value="2026-w37" />
+            </li>
+            <li>
+                <label for="week-input">week :</label>  
+                <!-- type=week : 연도와 주차(YYYY-wxx)을 선택하는 주 단위 입력 피커 생성 -->
+                <input type="week" id="week-input" name="reservation_week" value="2026-09" />
+            </li>
+            <li>
+                <label for="date-input">date :</label>  
+                <!-- type=date : 특정 년-월-일(YYYY-MM-DD)을 선택하는 기본 달력 피커 생성 -->
+                <input type="date" id="date-input" name="reservation_date" value="2026-09-03" />
+            </li>
+            <li>
+                <label for="tiem-input">time :</label>  
+                <!-- type=time :시간(시:분)을 선택하는 타임 피커 생성 -->
+                <input type="time" id="time-input" name="reservation_time" value="14:52" />
+            </li>
+            <li>
+                <label for="local-input">local :</label>  
+                <!-- type=datetime-local : 사용자의 현재 시간을 기준으로 날짜와 시간을 동시에 선택 -->
+                <input type="datetime-local" id="local" name="reservation_local" value="2026-09-11T14:52:10" />
+            </li>
+        </ul>
+        <!-- 인원수 스핀버튼  -->
+         <h4>인원 수 입력</h4>
+         <ul>
+            <li>
+                <label for="peopleCount">예약 인원:</label>
+                <!-- type=number: 숫자만 입력이 가능한 스핀박스 형태 필드
+                     - min="1" : 최저 선택 가능한 값(1명 이상)
+                     - max="10" : 최대 선택 가능한 값(10명 이하)
+                     - value="2" : 기본값 설정(2명)
+                --> 
+                <input type="number" id="peopleCount" name="peopleCount" min="-5" max="10" value="2" />
+            </li>
+         </ul>
+         <!-- 만족도 평가 -->
+          <div>
+            <div>
+                <label for="status">만족도</label>
+                <!-- type=range : 드래그해서 값을 조절하는 슬라이더 조작바
+                     - min="0", max="10" : 0부터 10까지 사이의 범위를 설정 
+                -->
+                <input type="range" id="status" name="status" min="0" max="10" />
+            </div>
+          </div>
+    </form>
+</body>
+</html>
