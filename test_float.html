@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 가로배치 하기</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .parent{
+            border:5px solid red;
+            width: 600px;
+            /* height: 200px; */
+            /* overflow의 hidden을 지정하면 부모높이보다
+               자식의 높이가 넘쳐 화면에 숨기고 싶을 때
+            */
+            /* overflow: hidden; */
+            font-size: 15px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .child{
+            /* font-size: inherit;  */
+            /* 부모의 글꼴 크기를 상속받음  */
+            background-color: gold;
+            width: 200px;
+            height: 100px;
+            /* float의 left로 왼쪽 정렬을 하려고 한다.
+               자식에 float을 지정하면 부모는 자식이 없다고 여겨서
+               높이 값을 잃는다는 점 주의하자!!!
+            */
+            /* float: left; */
+            display: inline-block;
+            /* display: block; */
+            /* block 요소에만 margin:auto 사용할 수 있다. */
+            /* margin: auto; */
+        }
+        .parent02{
+            border:3px solid blue;
+            width: 606px;
+        }
+        .top{
+            background-color: blueviolet;
+            height: 50px;
+        }
+        .left{
+            background-color: skyblue;
+            height: 50px;
+            width: 200px;
+            float: left;
+        }
+        .right{
+            background-color: brown;
+            height: 50px;
+            width: 400px;
+            float:right;
+        }
+        .clear{
+            /* clear는 float을 지정하지 않았지만 위의 태그에
+               float을 지정한경우 자동으로 상속받는다.
+               고로, 위의 태그의 float을 해제해야 한다.
+               해제 하는 방법 : clear:both
+             */
+            background-color: dodgerblue;
+            height: 50px;
+            clear: both;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">child</div>
+    </div>
+    <hr/>
+
+    <div class="parent02">
+        <div class="top">float:none</div>
+        <div class="left">float:left</div>
+        <div class="right">float:right</div>
+        <div class="clear">float:clear</div>
+    </div>
+    
+</body>
+</html>

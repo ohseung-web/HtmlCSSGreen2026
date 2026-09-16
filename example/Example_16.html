@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제 04</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 50px 0;
+        }
+        /* plan 클래스의 공통 CSS */
+        .plan{
+            /* plan을 모두 div태그로 작성하므로 가로로 배치안됨
+               가로로 배치하기 위해서 display : inline-block;
+               로변경한다. 이유는 div태그는 block태그로
+               가로 배치가 안되고 세로 배치가 된다.
+            */
+           display: inline-block;
+           width: 220px;
+           background-color: white;
+           border-radius: 15px;
+           box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+           padding: 30px 20px;
+           margin: 0 15px;
+           text-align: center; 
+        }
+        /* featured 카드의 CSS부분 */
+        .featured{
+            background-color: #1e2a4a;
+            color: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+        .plan h2{
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        /* 공통 price CSS */
+        .price{
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .featured .price{
+            color: #ddd;
+        }
+        /* 공통 span CSS */
+        .price span{
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1e2a4a;
+        }
+        /* featured의 CSS 부분 */
+        .featured .price span{
+            color: #ffffff;
+        }
+        hr{
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 15px 0;
+        }
+        .featured hr{
+            border-top: 1px solid #4a5a7a;
+        }
+        /* 반드시 부모인 ul에서 list-style 제거한다. */
+        ul{
+            list-style: none;
+            text-align: left;
+        }
+        li{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        /* button 공통 CSS */
+        button{
+            /* width: 100%의 의미는 부모 가로사이즈 만큼의
+                      크기가 자동으로 지정됨
+            */
+            width: 100%;
+            padding: 10px 0;
+            border: none;
+            border-radius: 20px;
+            background-color: #1e2a4a;
+            font-size: 14px;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover{
+            background-color: #3b4d7a;
+        }
+        .featured button{
+            background-color: #ffffff;
+            color: #1e2a4a;
+        }
+        .featured button:hover{
+            background-color: #dddddd;
+        }
+        /* 가상요소 선택자
+           ::before, ::after의 요소가 존재한다.
+           실제로 존재하지 않는 가상의 요소를 HTML앞에
+           또는 HTML 뒤에 삽입해주는 선택자이다.
+           단, 가상요소 선택자는 반드시 내용(content)가 존재해야한다.
+           content : '가상문자'
+           가상문자는 아이콘, 기호, 텍스트 모두 가능
+           이모지콘 : 윈도우키 + . ✔️
+           특수문자 : 한글자음 + 한자키 : √
+           유니코드 : \2713 => √
+        
+        */
+        li::before{
+            content: '\2713  ';
+            color:#2ecc71;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <div class="plan">
+      <h2>Basic</h2>
+      <p class="price"><span>$9</span> / month</p>
+      <hr />
+      <ul>
+        <li>5 Projects</li>
+        <li>1GB Storage</li>
+        <li>Email Support</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+
+    <div class="plan featured">
+      <h2>Standard</h2>
+      <p class="price"><span>$19</span> / month</p>
+      <hr />
+      <ul>
+        <li>20 Projects</li>
+        <li>10GB Storage</li>
+        <li>Priority Support</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+
+    <div class="plan">
+      <h2>Premium</h2>
+      <p class="price"><span>$39</span> / month</p>
+      <hr />
+      <ul>
+        <li>Unlimited Projects</li>
+        <li>100GB Storage</li>
+        <li>24/7 Phone Support</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+</body>
+</html>

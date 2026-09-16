@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인 & 블록</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            font-size: 20px;
+            color: black;
+        }
+        div{
+            border: 1px solid red;
+            height: 50px;
+        }
+        a{
+            /* a태그의 문자색은 반드시 a태그 안에서만 변경 가능 */
+            text-decoration: none;
+            color: black;
+            /* a태그는 인라인 요소로 너비, 높이 가질 수 없다. */
+            /* 너비, 높이 가지려면 display를 block, 또는 inline-block로 변경 */
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.naver.com">네이버</a>
+    <a href="https://www.google.com">구글</a>
+    <a href="https://www.daum.net">다음</a>
+
+    <hr/>
+    <div>box1</div>
+    <div>box2</div>
+    <div>box3</div>
+</body>
+</html>
