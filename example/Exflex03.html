@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 연습문제01</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            height: 100%;
+        }
+        /* 화면 정중앙에 위치 */
+        body{
+            display: flex;
+            /* 가로 가운데 */
+            justify-content: center;
+            /* 세로 가운데 */
+            /* body안의 자식은 login-box 하나이므로
+               align-items 이용하여 세로 가운데 위치한다.
+            */
+            align-items: center;
+            background-color: #f2f2f2;
+            height: 100%;
+        }
+        .login-box{
+            background-color: #ffffff;
+            width: 300px;
+            padding: 40px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <input type="text" placeholder="아이디 입력" />
+        <input type="password" placeholder="비밀번호 입력" />
+        <button>로그인</button>
+    </div>
+
+</body>
+</html>

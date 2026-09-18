@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 연습</title>
+    <style>
+        /* 부모인 container 공통 CSS => display:flex */
+        .container{
+            /* 부모요소가 아니라 container의 자식요소를 가로 배치한다. */
+            display: flex;
+            width: 800px;
+            height: 200px;
+            border: 1px solid blue;
+        }
+        /* 보통 인라인 요소는 너비, 높이를 가질 수 없다.
+           다만, display:flex를 지정하면 Flex 컨테이너가 되면서 
+           그 내부의 직계 자식요소들은 자동을 블록 수준(Block-level)
+           요소와 유사한 성격을 가진다.
+        
+        */
+        .container .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- display:flex는 반드시 부모 flex속성을 지정해야 한다. -->
+    <div class="container">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+    </div>
+    <div class="container">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+    </div>
+    <br/>
+    <span class="container">
+        <span class="box">spanbox1</span>
+        <span class="box">spanbox2</span>
+        <span class="box">spanbox3</span>
+    </span>
+    <span class="container">
+        <span class="box">spanbox1</span>
+        <span class="box">spanbox2</span>
+        <span class="box">spanbox3</span>
+    </span>
+</body>
+</html>

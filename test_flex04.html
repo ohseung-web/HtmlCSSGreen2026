@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 연습</title>
+    <style>
+        /* 부모인 container 공통 CSS => display:flex */
+        .container{
+            /* 부모요소가 아니라 container의 자식요소를 가로 배치한다. */
+           display: flex;
+           width: 600px;
+           height: 200px;
+           border:3px solid #333;
+           background-color: #f4f4f4;
+           margin: 20px auto;
+        }
+        /* box 공통 CSS */
+        .container .box{
+            /* width: 100px; */
+            /* height: 100px; */
+            /* border: 1px solid red; */
+            /* background-color: coral; */
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            color:white;
+        }
+        /* box1 : order(음수값 지정) 가장 앞으로 이동 */
+      .container  .box1{
+            /* flex-basis: 100px; */
+            height: 100px;
+            background-color: #e74c3c;
+            /* 기본값이 0보다 작기때문에 HTML의 순서와 상관없이
+               맨 앞으로 감
+            */
+            order: -1;
+        }
+        /* box2 : flex-grow(남은 여백을 2 비율만큼 더 차지하는 속성) */
+       .container  .box2{
+            flex-grow: 2;
+            height: 100px;
+            background-color: dodgerblue;
+        }
+        /* box3 : flex-grow(남은 여백을 1 비율만큼 차지하는 속성) */
+        .container .box3{
+            flex-grow: 1;
+            height: 100px;
+            background-color:blueviolet;
+        }
+      /* box4 : align-self(부모정렬을 무시하고 혼자 맨 아래 정렬하는 속성) */
+      .container .box4{
+        height: 100px;
+        background-color:brown;
+        align-self: flex-end;
+
+      }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box box1">box1(order:-1)</div>
+        <div class="box box2">box2(grow:2)</div>
+        <div class="box box3">box3(grow:1)</div>
+        <div class="box box4">box4(self:end)</div>
+    </div>
+   
+</body>
+</html>

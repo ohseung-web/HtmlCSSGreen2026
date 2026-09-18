@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 연습</title>
+    <style>
+        /* 부모인 container 공통 CSS => display:flex */
+        .container{
+            /* 부모요소가 아니라 container의 자식요소를 가로 배치한다. */
+            display: flex;
+            width: 400px;
+            border: 2px solid green;
+            margin: 0 auto;
+            /* align-items속성은 한 줄일 때 사용하므로
+               부모의 높이가 없으면 의미가 없다.
+               center은 세로의 가운데 정렬을 의미한다.
+               flex-start는 세로의 위 정렬을 의미한다.
+               flex-end는 세로의 아래 정렬을 의미한다.
+            */
+            /* align-items:flex-end; */
+            height: 400px;
+            /* flex로 자동개행 속성 : flex-wrap:wrap */
+            flex-wrap: wrap;
+            /* 부모요소에 자식요소가 세로의 가운데 정렬하는 속성 */
+            align-content:center;
+            /* 부모요소에 자식요소가 가로의 가운데 정렬하는 속성 */
+            justify-content: center;
+        }
+    
+        .container .box{
+            width: 100px;
+            height: 100px;
+            /* border: 1px solid red; */
+            background-color: crimson;
+            border-radius: 5px;
+            margin: 5px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        align-content 속성은 자식요소들이 줄바꿈되어 2줄 이상 되었을 때
+        줄 단위로 정렬하는 속성이다.
+        aligen-items : 아이템(자식요소들) 한 줄로 있을 때
+        aligen-content : 아이템(자식요소들) 2줄, 3줄(flex-wrap:wrap) 되었을 때
+                         전체 줄 덩어리를 위/아래/가운데로 정렬하는 속성이다.
+    -->
+    <div class="container">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+        <div class="box">box7</div>
+        <div class="box">box8</div>
+        <div class="box">box9</div>
+    </div>
+   
+</body>
+</html>
