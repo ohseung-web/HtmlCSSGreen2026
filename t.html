@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul{
+        list-style: none;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      .sns-login{
+        width: 500px;
+        border: 1px solid red;
+        margin: 0 auto;
+      }
+      .sns-login ul{
+        display: flex;
+      }
+      .sns-login li a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      .sns-login a img{
+        width: 40px;
+        height: 40px;
+      }
+      .sns-login .naver{
+        background: green;
+      }
+      .sns-login .kakao{
+        background: green;
+      }
+      .sns-login .facebook{
+        background: green;
+      }
+      .sns-login .google{
+        background: green;
+      }
+      .sns-login .apple{
+        background: green;
+      }
+    </style>
+</head>
+<body>
+     <section class="sns-login">
+          <h2>SNS 간편 로그인</h2>
+          <ul>
+            <li>
+              <a href="#" class="naver"><img src="/OOZY/images/sns_naver.svg" alt="네이버 로그인"/></a>
+            </li>
+            <li>
+              <a href="#" class="kakao"><img src="/OOZY/images/sns_kakao.svg" alt="카카오 로그인"/></a>
+            </li>
+            <li>
+              <a href="#" class="facebook"><img src="/OOZY/images/sns_facebook.svg" alt="페이스북 로그인"/></a>
+            </li>
+            <li>
+              <a href="#" class="google"><img src="/OOZY/images/sns_google.svg" alt="구글 로그인"/></a>
+            </li>
+            <li>
+              <a href="#" class="apple"><img src="/OOZY/images/sns_apple.svg" alt="애플 로그인"/></a>
+            </li>
+          </ul>
+      </section>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>회원가입 | OOZY COFFEE</title>
+  <link rel="stylesheet" href="member.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <a class="logo" href="index.html" aria-label="OOZY COFFEE 홈으로">OOZY COFFEE</a>
+      <h1 class="page-title">회원가입</h1>
+      <p class="page-desc">가입하면 <strong>10만원 쿠폰팩</strong>을 바로 드려요!</p>
+
+      <form id="joinForm" action="#" method="post" novalidate>
+
+        <!-- 이메일 -->
+        <div class="field" data-field="email">
+          <label class="label" for="email">이메일<span class="req">*</span></label>
+          <div class="row">
+            <input class="input" type="email" id="email" name="email" placeholder="이메일을 입력해 주세요." autocomplete="email">
+            <button type="button" class="btn btn-side" id="btnCheckEmail">중복확인</button>
+          </div>
+          <p class="msg" id="emailMsg" role="status"></p>
+        </div>
+
+        <!-- 비밀번호 -->
+        <div class="field" data-field="pw">
+          <label class="label" for="pw">비밀번호<span class="req">*</span></label>
+          <input class="input" type="password" id="pw" name="pw" placeholder="비밀번호를 입력해 주세요." autocomplete="new-password" maxlength="20">
+          <p class="msg" id="pwMsg">8~20자, 영문·숫자·특수문자 중 2가지 이상 조합</p>
+        </div>
+
+        <!-- 비밀번호 확인 -->
+        <div class="field" data-field="pw2">
+          <label class="label" for="pw2">비밀번호 확인<span class="req">*</span></label>
+          <input class="input" type="password" id="pw2" name="pw2" placeholder="비밀번호를 한 번 더 입력해 주세요." autocomplete="new-password" maxlength="20">
+          <p class="msg" id="pw2Msg" role="status"></p>
+        </div>
+
+        <!-- 이름 -->
+        <div class="field" data-field="name">
+          <label class="label" for="name">이름<span class="req">*</span></label>
+          <input class="input" type="text" id="name" name="name" placeholder="이름을 입력해 주세요." autocomplete="name" maxlength="20">
+          <p class="msg" id="nameMsg"></p>
+        </div>
+
+        <!-- 휴대폰 -->
+        <div class="field" data-field="phone">
+          <label class="label" for="phone">휴대폰 번호<span class="req">*</span></label>
+          <div class="row">
+            <input class="input" type="tel" id="phone" name="phone" placeholder="010-0000-0000" autocomplete="tel" inputmode="numeric" maxlength="13">
+            <button type="button" class="btn btn-side" id="btnSendCode">인증번호 받기</button>
+          </div>
+          <p class="msg" id="phoneMsg" role="status"></p>
+        </div>
+
+        <!-- 생년월일 -->
+        <div class="field">
+          <label class="label" for="birth">생년월일<span class="opt">(선택)</span></label>
+          <input class="input" type="date" id="birth" name="birth" max="">
+        </div>
+
+        <!-- 성별 -->
+        <div class="field">
+          <span class="label" id="genderLabel">성별<span class="opt">(선택)</span></span>
+          <div class="radio-group" role="radiogroup" aria-labelledby="genderLabel">
+            <label><input type="radio" name="gender" value="F"><span>여성</span></label>
+            <label><input type="radio" name="gender" value="M"><span>남성</span></label>
+            <label><input type="radio" name="gender" value="N" checked><span>선택 안 함</span></label>
+          </div>
+        </div>
+
+        <!-- 약관 -->
+        <div class="terms" id="terms">
+          <h2 class="terms-title">약관 동의</h2>
+
+          <label class="check check-all">
+            <input type="checkbox" id="agreeAll">
+            <span>전체 동의하기</span>
+          </label>
+
+          <div class="term-item">
+            <label class="check">
+              <input type="checkbox" class="agree" data-required="true" name="agreeTerms">
+              <span><span class="tag">[필수]</span> 이용약관 동의</span>
+            </label>
+            <a href="#" target="_blank" rel="noopener">보기</a>
+          </div>
+
+          <div class="term-item">
+            <label class="check">
+              <input type="checkbox" class="agree" data-required="true" name="agreePrivacy">
+              <span><span class="tag">[필수]</span> 개인정보 수집 및 이용 동의</span>
+            </label>
+            <a href="#" target="_blank" rel="noopener">보기</a>
+          </div>
+
+          <div class="term-item">
+            <label class="check">
+              <input type="checkbox" class="agree" data-required="true" name="agreeAge">
+              <span><span class="tag">[필수]</span> 만 14세 이상입니다</span>
+            </label>
+          </div>
+
+          <div class="term-item">
+            <label class="check">
+              <input type="checkbox" class="agree" name="agreeMarketing">
+              <span><span class="tag opt">[선택]</span> 이벤트·혜택 정보 수신 동의</span>
+            </label>
+            <a href="#" target="_blank" rel="noopener">보기</a>
+          </div>
+
+          <p class="msg" id="termsMsg" role="status"></p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">가입하기</button>
+      </form>
+
+      <hr class="divider">
+      <p class="foot-text">이미 회원이신가요?</p>
+      <a href="login.html" class="btn btn-outline">로그인</a>
+    </section>
+  </main>
+
+  
+</body>
+</html>
